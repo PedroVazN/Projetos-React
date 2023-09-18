@@ -1,0 +1,515 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(84, 4, 4);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(84, 4, 4, 1) 0%,
+    rgba(240, 0, 44, 1) 51%,
+    rgba(85, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(84, 4, 4, 1) 0%,
+    rgba(240, 0, 44, 1) 51%,
+    rgba(85, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(84, 4, 4, 1) 0%,
+    rgba(240, 0, 44, 1) 51%,
+    rgba(85, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#540404",endColorstr="#550000",GradientType=1);
+}
+
+.produtos h2 {
+  color: white;
+  text-align: center;
+  font-size: x-large;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para a lista de produtos no carrinho */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botão de remoção */
+button {
+  background-color: #671007;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+h3 {
+  margin-top: 20px;
+  text-align: right;
+}
+
+#produtos-disponiveis ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#produtos-disponiveis li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botão de adicionar ao carrinho */
+#produtos-disponiveis button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#produtos-disponiveis button:hover {
+  background-color: #2980b9;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo Carrinho  */
+
+.carrinho {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 0;
+  margin-top: 37px;
+}
+
+.carrinho h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.carrinho-lista {
+  margin-top: 20px;
+}
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carrinho-item button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrinho-item button:hover {
+  background-color: #c0392b;
+}
+
+/* Estilo Produtos  */
+
+.produtos {
+  flex: 2;
+  margin-top: -80px;
+}
+
+.produtos h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  font-size: 2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Gradiente animado */
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #ff0800,
+    #ffffff,
+    #ff0800,
+    #ffffff,
+    #ff0800,
+    #ffffff,
+    #ff0800,
+    #ffffff,
+    #ff0800,
+    #ffffff,
+    #ff0800
+  );
+  background-size: 200% 100%;
+  animation: gradientAnimation 1.5s linear infinite;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: calc();
+}
+
+.produtos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.produto-card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  min-height: 350px;
+  position: relative;
+  margin-top: -50px;
+  margin: 10px;
+  border: 3px solid #000;
+  animation: changeBorderColor 2s infinite; /* Adicione a animação aqui */
+}
+
+@keyframes changeBorderColor {
+  0%,
+  100% {
+    border-color: rgb(255, 39, 212); /* Cor inicial e final da borda */
+  }
+  25% {
+    border-color: rgb(26, 255, 0); /* Cor da borda após 25% da animação */
+  }
+  50% {
+    border-color: rgb(0, 207, 254); /* Cor da borda após 50% da animação */
+  }
+}
+
+.produto-card:hover {
+  transform: scale(1.02);
+}
+
+.produto-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Gradiente animado */
+  background: linear-gradient(
+    90deg,
+    #000,
+    #ff0800,
+    #000,
+    #ff0800,
+    #000,
+    #ff0800
+  );
+  background-size: 200% 100%;
+  animation: gradientAnimation 1.5s linear infinite;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: calc();
+}
+
+.produto-card p {
+  margin: 10px 0;
+}
+
+.produto-card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produto-card button:hover {
+  background-color: #2980b9;
+}
+
+.produto-card img {
+  max-width: 250px;
+  max-height: 200px;
+  border-radius: 5px;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Estilos Header */
+
+.logo img {
+  max-height: 40px;
+  display: flex;
+}
+
+.menu-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-button:last-child {
+  margin-right: 0;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.content {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    display: none;
+  }
+
+  .header {
+    padding: 8px 16px;
+  }
+
+  .content {
+    margin-top: 50px;
+    padding: 10px;
+  }
+}
+/* Estilização do banner */
+
+.banner-container {
+  background-image: url("https://redragon.es/content/uploads/2021/07/COOKIES-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Defina a altura do banner para ocupar a altura da tela inteira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.banner-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgb(255, 103, 8), 0 0 20px #00f, 0 0 30px #00f;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.scroll-down span {
+  margin-right: 8px;
+}
+
+.button {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+/* Adicione isso ao seu arquivo CSS (App.css) */
+
+
+.produtos-banner {
+  background-color: #000;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produtos-banner p {
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+  font-family: "Arial", sans-serif; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8),
+    0 0 30px rgba(255, 0, 0, 0.8); 
+}
