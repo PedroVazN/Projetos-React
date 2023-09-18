@@ -5,6 +5,7 @@ import Carrinho from "./Components/Carrinho";
 import produtos from "./Components/produtosData";
 import Header from "./Components/Header";
 import Banner from "./Components/banner";
+import Footer from "./Components/Footer"; 
 
 /* nathan */
 
@@ -49,6 +50,8 @@ function App() {
 
         />
       </div>
+      <Footer /> {/* Adicione o componente Footer aqui */}
+
     </div>
   );
 }

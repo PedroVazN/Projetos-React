@@ -35,7 +35,7 @@ const produtos = [
     preco: 160.5,
     titulo: "Redragon Hero",
     descricao:
-      "Headset Gamer Redragon Hero, 3.5mm, Múltiplas Plataformas, Red/White, H530-R",
+      "Headset Gamer Redragon Hero, 3.5mm, Múltiplas Plataformas, Red/White, H530-R,Design elegante Robusto, resistente contra arranhões Falante de alto magnetismo,",
     imagem: "https://m.media-amazon.com/images/I/61FnWPd9gYL._AC_SX425_.jpg",
   },
   {
@@ -45,7 +45,7 @@ const produtos = [
     titulo: "Redragon FIZZ",
     descricao:
       "Layout compacto 60% para os gamers que procuram deixar o máximo de espaço possível sobre a mesa Cor: Preto Marca do produto: Redragon País de origem do produto: CN",
-    imagem: "https://m.media-amazon.com/images/I/61qGN7YsVsL._AC_SX425_.jpg",
+    imagem: "https://m.media-amazon.com/images/I/61eBVE+NkwS._AC_SX425_.jpg",
   },
   {
     id: 6,

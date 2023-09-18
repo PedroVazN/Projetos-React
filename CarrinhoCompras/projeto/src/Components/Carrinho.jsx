@@ -12,6 +12,7 @@ function Carrinho({ carrinho, removerProduto, calcularTotal }) {
           </div>
         ))}
       </div>
+      
       <h3>Valor Total: R${calcularTotal().toFixed(2)}</h3>
     </div>
   );
