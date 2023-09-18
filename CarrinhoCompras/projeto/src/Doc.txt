@@ -1,0 +1,29 @@
+function Carrinho({ carrinho, removerProduto, calcularTotal }) 
+: Esta é a declaração de uma função de componente chamada Carrinho. 
+Ela aceita três parâmetros desestruturados: carrinho, removerProduto, 
+e calcularTotal. Esses parâmetros são fornecidos quando você chama o componente Carrinho de outro lugar.
+
+<div className="carrinho">...</div>: Isso cria uma <div> com a classe 
+CSS "carrinho". Esta é a div principal que envolve todo o conteúdo do carrinho de compras.
+
+<h2>Carrinho de Compras</h2>: Este é um cabeçalho que exibe 
+"Carrinho de Compras" no topo do carrinho.
+
+<div className="carrinho-lista">...</div>: Isso cria outra
+ <div> com a classe CSS "carrinho-lista". Essa div envolve a lista de itens no carrinho.
+
+{carrinho.map((produto, index) => (...))}: Aqui, estamos 
+mapeando o array carrinho. Para cada produto no carrinho, estamos 
+renderizando um <div> com informações sobre o produto, como nome e preço, 
+juntamente com um botão "Remover" que permite remover o produto do c
+arrinho. O map é uma função de array que itera sobre cada elemento do array 
+carrinho e gera elementos JSX com base nesses elementos.
+
+<h3>Valor Total: R${calcularTotal().toFixed(2)}</h3>: 
+Exibe o valor total do carrinho, que é calculado chamando a função calcularTotal 
+e formatando-o como um número com duas casas decimais (utilizando o método toFixed(2)). 
+O resultado é inserido dentro do elemento <h3>.
+
+Resumindo, este componente Carrinho recebe informações sobre os produtos no carrinho, 
+bem como funções para remover produtos e calcular o valor total. Ele renderiza 
+essas informações em HTML para exibir o carrinho de compras na interface do usuário.

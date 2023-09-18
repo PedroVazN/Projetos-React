@@ -1,5 +1,18 @@
 import React from 'react';
 
+/**
+ * O componente Carrinho exibe os produtos adicionados ao carrinho de compras.
+ *
+ * @param {Object[]} carrinho - A lista de produtos no carrinho.
+ * @param {number} carrinho[].id - O ID do produto.
+ * @param {string} carrinho[].nome - O nome do produto.
+ * @param {number} carrinho[].preco - O preço do produto.
+ * @param {Function} removerProduto - Uma função para remover um produto do carrinho.
+ * @param {Function} calcularTotal - Uma função para calcular o valor total do carrinho.
+ * 
+ * @returns {JSX.Element} O componente React que exibe o carrinho de compras.
+ */
+
 function Carrinho({ carrinho, removerProduto, calcularTotal }) {
   return (
     <div className="carrinho">
