@@ -13,7 +13,7 @@ function App() {
   const [carrinho, setCarrinho] = useState([]);
 
   const adicionarProduto = (produto) => { 
-    setCarrinho([carrinho, produto]);
+    setCarrinho([...carrinho, produto]);
   };
 
   const removerProduto = (posicao) => {
