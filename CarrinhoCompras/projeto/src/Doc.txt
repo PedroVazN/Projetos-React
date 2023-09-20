@@ -26,4 +26,4 @@ O resultado é inserido dentro do elemento <h3>.
 
 Resumindo, este componente Carrinho recebe informações sobre os produtos no carrinho, 
 bem como funções para remover produtos e calcular o valor total. Ele renderiza 
-essas informações em HTML para exibir o carrinho de compras na interface do usuário.
+dddds informações em HTML para exibir o carrinho de compras na interface do usuário.

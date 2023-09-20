@@ -2,7 +2,7 @@ import React from 'react';
 
 function BotaoAdicionarCarrinho({ produto, adicionarProduto }) {
   return (
-    <div data-tooltip={`Preço: $${produto.preco}`} className="button">
+    <div className="button">
       <div className="button-wrapper" onClick={() => adicionarProduto(produto)}>
         <div className="text">Comprar</div>
         <span className="icon">

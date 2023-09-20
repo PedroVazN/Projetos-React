@@ -1,0 +1,41 @@
+import React from 'react';: Importa a biblioteca React.
+
+import BotaoAdicionarCarrinho from './BotaoAdicionar';: 
+Importa o componente BotaoAdicionarCarrinho de um arquivo local.
+
+function ProdutosList({ produtos, adicionarProduto }) 
+{ ... }: Define um componente funcional chamado ProdutosList. 
+Ele recebe dois argumentos: produtos (uma lista de produtos) 
+e adicionarProduto (uma função para adicionar um produto ao carrinho).
+
+<div className="produtos"> ... </div>: Renderiza um contêiner 
+principal com a classe CSS "produtos" para envolver todo o conteúdo.
+
+<div className="produtos-lista"> ... </div>: Renderiza um 
+contêiner com a classe CSS "produtos-lista" para exibir a lista de produtos.
+
+{produtos.map((produto) => ( ... ))}: Mapeia a lista de 
+produtos e cria um card para cada produto usando a função map.
+
+<div key={produto.id} className="produto-card"> ... 
+</div>: Renderiza um card para cada produto. A propriedade key 
+é usada para ajudar o React a identificar de forma única cada elemento na lista.
+
+<img src={produto.imagem} alt={produto.nome} />: Exibe a 
+imagem do produto com base nas informações do objeto produto.
+
+<h3>{produto.titulo}</h3>: Exibe o título do produto.
+
+<p>{produto.descricao}</p>: Exibe a descrição do produto.
+
+<p>{produto.nome} - R${produto.preco.toFixed(2)}</p>: 
+Exibe o nome do produto e o preço formatado em reais (R$) com duas casas decimais.
+
+<BotaoAdicionarCarrinho produto={produto} 
+adicionarProduto={adicionarProduto} />: Renderiza o componente B
+otaoAdicionarCarrinho para adicionar o produto ao carrinho. 
+Passa as informações do produto e a função adicionarProduto como propriedades.
+
+export default ProdutosList;: Exporta o componente 
+ProdutosList para que ele possa ser usado em outros 
+lugares em seu aplicativo React.

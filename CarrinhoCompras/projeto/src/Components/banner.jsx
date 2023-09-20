@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Banner({ scrollToProdutos }) {
+function Banner({}) {
   return (
     <div>
       <div className="banner-container">
